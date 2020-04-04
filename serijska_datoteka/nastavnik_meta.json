@@ -1,7 +1,0 @@
-[
-    {
-        "columns": ["sifra_zaposlenog", "ime", "prezime", "datum_rodjenja", "titula"],
-        "key": "sifra_zaposlenog",
-        "linked_files": ["student_data", "predmet_data"]
-    }
-]

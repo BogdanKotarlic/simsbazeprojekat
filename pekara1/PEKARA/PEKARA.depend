@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1585337952 source:c:\users\bogdan\desktop\c++\pekara1\pekara\main.cpp
+	<iostream>
+	<vector>
+	"Sirovina.h"
+	"Pekara.h"
+	"Brasno.h"
+	"Aditiv.h"
+
+1585337262 c:\users\bogdan\desktop\c++\pekara1\pekara\include\sirovina.h
+	<iostream>
+	<string>
+
+1585337892 c:\users\bogdan\desktop\c++\pekara1\pekara\include\pekara.h
+	<iostream>
+	<string>
+	<vector>
+	"Sirovina.h"
+
+1585337592 c:\users\bogdan\desktop\c++\pekara1\pekara\include\brasno.h
+	"Sirovina.h"
+	<string>
+
+1585337704 c:\users\bogdan\desktop\c++\pekara1\pekara\include\aditiv.h
+	"Sirovina.h"
+
+1585337732 source:c:\users\bogdan\desktop\c++\pekara1\pekara\src\aditiv.cpp
+	"Aditiv.h"
+
+1585337616 source:c:\users\bogdan\desktop\c++\pekara1\pekara\src\brasno.cpp
+	"Brasno.h"
+

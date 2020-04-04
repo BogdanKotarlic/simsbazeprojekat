@@ -1,0 +1,7 @@
+[
+    {
+        "columns": ["sifra", "naziv", "broj_casova", "smer", "broj_semestra", "lista_zaposlenih"],
+        "key": "sifra",
+        "linked_files": ["student_data", "nastavnik_data"]
+    }
+]

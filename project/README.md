@@ -1,7 +1,9 @@
 Projekat iz predmeta:
--Specifikacija i modeliranje softvera
--Baze podataka
+Specifikacija i modeliranje softvera
+i
+Baze podataka
 
-Studenti:
--Srdjan Horvat 2018270150
--Bogdan Kotarlic 2018270075
+Studenti
+Srdjan Horvat 2018270150
+i
+Bogdan Kotarlic 2018270075

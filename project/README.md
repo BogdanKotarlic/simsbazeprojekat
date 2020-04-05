@@ -3,7 +3,7 @@ Specifikacija i modeliranje softvera
 i
 Baze podataka
 
-Studenti
-Srdjan Horvat 2018270150
+Studenti:
+Srdjan Horvat (2018/270150)
 i
-Bogdan Kotarlic 2018270075
+Bogdan Kotarlic (2018/270075)

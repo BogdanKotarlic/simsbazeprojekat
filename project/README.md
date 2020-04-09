@@ -1,10 +1,9 @@
-# sims-bp-2019
-
 Projekat iz predmeta:
-- Specifikacija i modelovanje softvera
-- Baze podataka
+Specifikacija i modeliranje softvera
+i
+Baze podataka
 
-Na ovom repozitorijumu će se nalaziti prototip aplikacije koja se izrađuje na osnovu specifikacije projekta na ova dva predmeta.
-
-# Instalacija
-Potrebno je instalirati zavisnosti navedene u requirements.txt unutar prethodno kreiranog virtuelnog okruženja.
+Studenti:
+Srdjan Horvat (2018/270150)
+i
+Bogdan Kotarlic (2018/270075)

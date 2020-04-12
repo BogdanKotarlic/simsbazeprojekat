@@ -11,27 +11,21 @@ class MenuBar(QtWidgets.QMenuBar):
         view_menu = QtWidgets.QMenu("View", self)
         help_menu = QtWidgets.QMenu("Help", self)
 
-        newFileAction = QtWidgets.QAction("New File", self)
-        newFileAction.setShortcut("CTRL+N")
-        newFileAction.setStatusTip("Create a New File")
-        editFileAction = QtWidgets.QAction("Edit", self)
-        editFileAction.setShortcut("CTRL+E")
-        editFileAction.setStatusTip("Edit File")
-        saveFileAction = QtWidgets.QAction("Save", self)
-        saveFileAction.setShortcut("CTRL+S")
-        saveFileAction.setStatusTip("Save File")
-        deleteFileAction = QtWidgets.QAction("Delete", self)
-        deleteFileAction.setShortcut("CTRL+D")
-        deleteFileAction.setStatusTip("Delete File")
-        quitAction = QtWidgets.QAction("Quit", self)
-        quitAction.setShortcut("CTRL+Q")
-        quitAction.setStatusTip("Quit Application")
-        
-        file_menu.addAction(newFileAction)
-        file_menu.addAction(saveFileAction)
-        file_menu.addAction(editFileAction)
-        file_menu.addAction(deleteFileAction)
-        file_menu.addAction(quitAction)
+        openFileAction = QtWidgets.QAction("&Open File", self,
+                shortcut=QtGui.QKeySequence.Open,
+                statusTip="Open", triggered=self.main_window.openNewFileButton)
+
+        openFolderAction = QtWidgets.QAction("&Open Folder", self,
+                shortcut=None,
+                statusTip="Open", triggered=self.main_window.openFolderButton)
+
+        saveAction = QtWidgets.QAction("&Save", self,
+                shortcut=QtGui.QKeySequence.Save,
+                statusTip="Open", triggered=self.main_window.saveAction)
+
+        file_menu.addAction(openFileAction)
+        file_menu.addAction(openFolderAction)
+        file_menu.addAction(saveAction)
         
         toggle_structure_dock_action = self.main_window.structure_dock.toggleViewAction()
         view_menu.addAction(toggle_structure_dock_action)

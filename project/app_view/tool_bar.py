@@ -6,15 +6,15 @@ class ToolBar(QtWidgets.QToolBar):
         super().__init__(parent)
         self.main_window = parent
 
+        #save action
         saveAction = QtWidgets.QAction(QtGui.QIcon("icons/icons8-save-32.png"), "Save", self)
-        saveAction.setStatusTip("Save program")
+        saveAction.setStatusTip("Save updated file")
+        saveAction.triggered = self.main_window.saveAction
 
-        leftAction = QtWidgets.QAction("Left", self)
-        leftAction.setIcon(QtGui.QIcon("icons/icons8-arrow-left-32.png"))
-
-        rightAction = QtWidgets.QAction("Right", self)
-        rightAction.setIcon(QtGui.QIcon('icons/icons8-arrow-right-32.png'))
+        #delete action
+        deleteAction = QtWidgets.QAction(QtGui.QIcon("icons/icons8-delete-file-32.png"), "Delete", self)
+        deleteAction.setStatusTip("Delete file")
+        deleteAction.triggered = self.main_window.deleteAction
 
         self.addAction(saveAction)
-        self.addAction(leftAction)
-        self.addAction(rightAction)
+        self.addAction(deleteAction)

@@ -1,5 +1,6 @@
 {
     "columns":["sifra_zaposlenog", "ime", "prezime", "titula"],
     "key": "sifra_zaposlenog",
-    "linked_files":[]
+    "linked_files":[],
+    "type": "serijska"
 }

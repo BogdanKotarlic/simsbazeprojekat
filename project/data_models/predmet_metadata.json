@@ -1,0 +1,6 @@
+{
+    "columns":["sifra_predmeta", "naziv", "smer", "nastavnici"],
+    "key": "sifra_predmeta",
+    "linked_files":["nastavnik_data"],
+    "type:": "sekvencijalna"
+}

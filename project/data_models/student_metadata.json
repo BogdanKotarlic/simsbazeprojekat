@@ -1,5 +1,6 @@
 {
     "columns":["indeks", "ime", "prezime", "predmeti"],
     "key": "indeks",
-    "linked_files":["predmeti_data"] 
+    "linked_files":["predmet_data"],
+    "type": "serijska"
 }

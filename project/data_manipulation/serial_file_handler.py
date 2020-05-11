@@ -12,9 +12,10 @@ class SerialFileHandler():
         self.load_data()
 
     def load_data(self):
+        # Ucitavanje podataka
         with open((self.filepath), 'rb') as dfile:
             self.data = pickle.load(dfile)
-
+        # Ucitavanje metapodataka
         with open(self.meta_filepath) as m:
             self.metadata = json.load(m)
 

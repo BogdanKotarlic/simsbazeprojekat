@@ -1,8 +1,8 @@
-from data_handler import DataHandler
+from data_manipulation.data_handler import DataHandler
 import json
-import pickle #koristimo pickle za serijalizaciju i deserijalizaciju objekata
+import pickle
 
-class SerialFileHandler(DataHandler):
+class SerialFileHandler():
     def __init__(self, filepath, meta_filepath):
         super().__init__()
         self.filepath = filepath
@@ -12,18 +12,17 @@ class SerialFileHandler(DataHandler):
         self.load_data()
 
     def load_data(self):
-        #ucitavanje Podataka
+        # Ucitavanje podataka
         with open((self.filepath), 'rb') as dfile:
-            self.data = pickle.load(dfile) #koristimo pickle za deserijalizaciju podataka
-
-        #ucitavanje Meta Podataka
-        with open(self.meta_filepath) as meta_file:
-            self.metadata = json.load(meta_file)
+            self.data = pickle.load(dfile)
+        # Ucitavanje metapodataka
+        with open(self.meta_filepath) as m:
+            self.metadata = json.load(m)
 
     def get_one(self, id):
-        for d in self.data: #za serijsku datoteku moramo proci linearno kroz sve slogove kada trazimo
-            if getattr(d, (self.metadata["key"])) == id: #ako se poklopi kljucna kolona, koju dobavlja
-                return d
+        for i in self.data: 
+            if getattr(i, (self.metadata["key"])) == id: 
+                return i
         return None
 
     def get_all(self):
@@ -35,25 +34,27 @@ class SerialFileHandler(DataHandler):
             pickle.dump(self.data, f)
 
     def delete(self, id):
-        for d in self.data:
-            if getattr(d, (self.metadata["key"]) == id):
-                self.data.remove(d)
-        with open((self.filepath), 'wb') as new_data:
-            self.data = pickle.dump(self.data, new_data)
+        for i in self.data:
+            if getattr(i, (self.metadata["key"]) == id):
+                self.data.remove(i)
+        with open((self.filepath), 'wb') as data:
+            pickle.dump(self.data, data)
 
     def edit(self, id, value):
-        pronadjen = False
+        x = False
         index = 0
         for i in self.data:
             if getattr(i, (self.metadata["key"])) == id:
                 self.data[index] = value
-                pronadjen = True
+                x = True
             else:
                 index += 1
-        if pronadjen == False:
-            print("Ne postoji objekat u listi sa unetim id-em!")
+        if x == False:
+            print("Ne postoji element sa ovim ID.")
+        else:
+            with open(self.filepath, 'wb') as dfile:
+                pickle.dump(self.data, dfile)
 
-    def print_all(self):
-        all_data = self.get_all()
-        for i in all_data:
-            print(i.ime)
+    def save(self):
+        with open(self.filepath, 'wb') as data:
+            pickle.dump(self.data, data)

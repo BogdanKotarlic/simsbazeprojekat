@@ -3,7 +3,6 @@ from app_view.structure_dock import StructureDock
 from app_view.menu_bar import MenuBar
 from app_view.workspace_widget import WorkspaceWidget
 from app_view.tool_bar import ToolBar
-from app_view.workspace_widget import WorkspaceWidget
 from data_manipulation.serial_file_handler import SerialFileHandler
 from data_manipulation.sequential_file_handler import SequentialFileHandler
 import json
@@ -18,11 +17,11 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.menu_bar = MenuBar(self)
         self.tool_bar = ToolBar(self)
-        self.structure_dock = StructureDock("Structure dock", self)
+        self.structure_dock = StructureDock("Structure dock", self)  
         self.central_widget = QtWidgets.QTabWidget(self)
+        self.workspace_widget = WorkspaceWidget(self.central_widget)
         self.central_widget.addTab(self.workspace_widget, QtGui.QIcon("icons/icons8-edit-file-64.png"), "Prikaz tabele")
         self.central_widget.setTabsClosable(True)
-        self.workspace_widget = WorkspaceWidget(self.central_widget)
         self.status_bar = QtWidgets.QStatusBar(self)
         self.status_bar.showMessage("Status bar!")
         

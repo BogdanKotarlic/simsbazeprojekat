@@ -27,8 +27,8 @@ class MenuBar(QtWidgets.QMenuBar):
         file_menu.addAction(openFolderAction)
         file_menu.addAction(saveAction)
         
-        toggle_structure_dock_action = self.main_window.structure_dock.toggleViewAction()
-        view_menu.addAction(toggle_structure_dock_action)
+       # toggle_structure_dock_action = self.main_window.structure_dock.toggleViewAction()
+       # view_menu.addAction(toggle_structure_dock_action)
 
         self.addMenu(file_menu)
         self.addMenu(edit_menu)
